@@ -1,17 +1,16 @@
-import React from 'react'
+import React from "react";
 
-import Card from './comp/Card'
-import TopNav from '../../components/top-nav/TopNav'
+import Card from "./comp/Card";
+
+import DefaultLayout from "../../layouts/DefaultLayout";
 
 function Home() {
-    return (
-        <div>
-            <TopNav />
-            Home
-            <Card />
-        </div>
-
-    )
+  return (
+    <DefaultLayout>
+      Home
+      <Card />
+    </DefaultLayout>
+  );
 }
 
-export default Home 
+export default Home;
