@@ -7,7 +7,7 @@ function TopNav() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex justify-between items-center h-16 bg-gray-200 border-b border-border px-6 hover:cursor-pointer">
+    <div className="flex justify-between items-center h-16 bg-background border-b border-border px-6 hover:cursor-pointer">
       <div
         className="font-semibold text-foreground"
         onClick={() => navigate("/")}
