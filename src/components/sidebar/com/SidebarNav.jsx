@@ -1,11 +1,16 @@
-import React from "react";
-
-import { sidebarNav } from "../../../data/nav";
+import { NavLink, useLocation } from "react-router-dom";
 
 function SidebarNavItem({ item }) {
-  const { badge, icon: Icon, label } = item;
+  const { pathname } = useLocation();
+
+  console.log(pathname);
+
+  const { badge, icon: Icon, label, to } = item;
   return (
-    <div className="flex items-center gap-3 w-full h-11 px-3 text-left text-sm font-medium">
+    <NavLink
+      to={to}
+      className="flex items-center gap-3 w-full h-11 px-3 text-left text-sm font-medium"
+    >
       <Icon className="size-4 shrink-0" />
       <span>{label}</span>
       {badge && (
@@ -13,16 +18,16 @@ function SidebarNavItem({ item }) {
           {badge}
         </span>
       )}
-    </div>
+    </NavLink>
   );
 }
 
-function SidebarNav() {
+function SidebarNav({ items }) {
   return (
     <div>
       <ul className="space-y-1">
-        {sidebarNav.map((item) => (
-          <SidebarNavItem item={item} />
+        {items.map((item) => (
+          <SidebarNavItem key={item.label} item={item} />
         ))}
       </ul>
     </div>

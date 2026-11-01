@@ -6,8 +6,18 @@ import {
 } from "lucide-react";
 
 export const sidebarNav = [
-  { label: "Stock Summary", icon: BarChart3 },
-  { label: "Stock Requests", icon: ClipboardList, badge:3 },
-  { label: "Disturibution Runs", icon: PackageCheck },
-  { label: "Return Approvals", icon: RotateCcw , badge:2},
+  { label: "Stock Summary", icon: BarChart3, to: "/stock-summary" },
+  {
+    label: "Stock Requests",
+    icon: ClipboardList,
+    badge: 3,
+    to: "/stock-requests",
+  },
+  { label: "Disturibution Runs", icon: PackageCheck, to: "/distribution-runs" },
+  {
+    label: "Return Approvals",
+    icon: RotateCcw,
+    badge: 2,
+    to: "/return-approvals",
+  },
 ];
