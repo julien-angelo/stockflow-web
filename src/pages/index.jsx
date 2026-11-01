@@ -1,4 +1,3 @@
-import Home from "./home";
 import Login from "./login";
 
 import StockSummary from "./stock-summary";
@@ -7,7 +6,6 @@ import DistributionRuns from "./distribution-runs";
 import ReturnApprovals from "./return-approvals";
 
 export {
-  Home,
   Login,
   StockSummary,
   StockRequests,

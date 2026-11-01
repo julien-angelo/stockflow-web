@@ -6,7 +6,12 @@ import {
 } from "lucide-react";
 
 export const sidebarNav = [
-  { label: "Stock Summary", icon: BarChart3, to: "/stock-summary" },
+  {
+    label: "Stock Summary",
+    icon: BarChart3,
+    to: "/stock-summary",
+    activePaths: ["/", "/stock-summary"],
+  },
   {
     label: "Stock Requests",
     icon: ClipboardList,
