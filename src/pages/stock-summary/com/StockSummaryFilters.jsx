@@ -7,7 +7,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
 import { monthOptions, warehouseOptions } from "@/data/mock/stock-summary";
 
 function StockSummaryFilters() {

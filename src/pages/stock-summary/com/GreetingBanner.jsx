@@ -1,12 +1,12 @@
+import { useState } from "react";
+import { X } from "lucide-react";
+
 import { Button } from "@/components/ui/button";
 import { stockSummaryGreeting } from "@/data/mock/stock-summary";
-import { X } from "lucide-react";
-import { useState } from "react";
 
 function GreetingBanner() {
   const [isVisible, setIsVisible] = useState(true);
 
-  //when component return null, nothing will be rendered
   if (!isVisible) {
     return null;
   }
@@ -14,6 +14,7 @@ function GreetingBanner() {
   return (
     <section className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-[#ad2500] via-[#e94713] to-[#ff8354] px-6 py-5 text-white shadow-sm">
       <div className="absolute -right-20 -top-24 size-72 rounded-full bg-orange-200/15 blur-3xl" />
+
       <Button
         type="button"
         variant="ghost"
@@ -29,9 +30,9 @@ function GreetingBanner() {
         <p className="text-[11px] font-semibold tracking-wide text-orange-100">
           {stockSummaryGreeting.role}
         </p>
-        <p className="mt-1 text-xl font-semibold tracking-tight">
+        <h2 className="mt-1 text-xl font-semibold tracking-tight">
           {stockSummaryGreeting.title}
-        </p>
+        </h2>
         <p className="mt-1.5 max-w-xl text-sm leading-5 text-orange-50">
           {stockSummaryGreeting.description}
         </p>
